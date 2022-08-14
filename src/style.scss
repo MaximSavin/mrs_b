@@ -35,10 +35,14 @@ body {
   justify-content: center;
   min-width: 320px;
   max-height: 100vh;
-}
 
-#first_screen video {
-  width: 100%;
+  video {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2vw;
+  }
 }
 
 html {
@@ -141,24 +145,22 @@ html {
   }
   #navigate {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: auto;
     width: var(--carousel-width);
     margin-block: -50px;
-    // margin-top: 1vw;
-    // margin-top: -100%;
   }
 
   #navigate a {
     text-decoration: none;
     color: #333;
-    font-size: 1.2rem;
+    font-size: 0;
     background: #ddd;
     z-index: 1;
-    line-height: 0.6rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    transition: box-shadow 0.5s;
+    line-height: 0;
+    border-radius: 50%;
+    padding: .5rem;
+    margin: 1rem;
   }
 
   #navigate a:hover {
