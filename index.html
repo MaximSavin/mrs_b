@@ -4,23 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MrsB - The Phuket Restaurant with Fire & Spirit, and the warmth of home.</title>
-    <!-- <link type="text/css" rel="stylesheet" href="src/style.scss" /> -->
-    <script type="module" src="/src/main.ts"></script>
+    <link type="text/css" rel="stylesheet" href="src/style.scss" />
+    <!-- <script type="module" src="/src/main.ts"></script> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+    </style>
   </head>
   <body>
-    <header><img class="logo" src="public/img/logo.png" /></header>
+    <header>
+      <a class="logo" href="/"><img src="/img/logo.png" /></a>
+      <a
+        class="menu_button"
+        href="https://www.mrs-b.com/wp-content/uploads/2022/01/MrsB-Specimen-Menu-Jan-22.docx"
+        target="_blank"
+      >Menu</a>
+    </header>
 
-    <div id="first_screen">
-      <video id="myVideo" autoplay loop muted playsinline poster="public/img/cover.jpeg">
-        <source src="public/video/fire.mp4" type="video/mp4" />
+    <section class="first_screen">
+      <video autoplay loop muted playsinline poster="/img/cover.jpeg">
+        <source src="/video/fire.mp4" type="video/mp4" />
       </video>
       <div class="title">
         <h1>Fire &amp; Spirit</h1>
         <p>Western craft, local produce and a raw wood grill</p>
       </div>
-    </div>
+    </section>
 
-    <div id="slider">
+    <section class="slider">
       <div class="center">
         <div class="carousel">
           <ul class="scroll" scroll-behavior="smooth">
@@ -41,8 +51,9 @@
             <li class="scroll-item-outer">
               <div id="slide-3" class="scroll-item">
                 <img
-                src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                alt="Picture 3">
+                  src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                  alt="Picture 3"
+                />
               </div>
             </li>
             <li class="scroll-item-outer">
@@ -56,12 +67,17 @@
           </ul>
         </div>
       </div>
-      <nav id="navigate">
-        <a href="#slide-1">&nbsp;</a>
-        <a href="#slide-2">&nbsp;</a>
-        <a href="#slide-3">&nbsp;</a>
-        <a href="#slide-4">&nbsp;</a>
-      </nav>
-    </div>
+      <ul class="navigate">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+    </section>
+    <section class="barmen">
+      <div class="text">
+        <h2 class="elementor-heading-title elementor-size-default">Simple Pleasures</h2>
+        <p>Affordable food and drink made with passion and craft, served in a convivial atmosphere</p>
+      </div>
+    </section>
   </body>
 </html>

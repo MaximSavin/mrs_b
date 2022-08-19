@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 32px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 1);
   background-color: #242424;
 
   font-synthesis: none;
@@ -24,33 +24,12 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-}
-
-#first_screen {
-  display: flex;
-  /* position: relative; */
-  place-items: center;
-  justify-content: center;
-  min-width: 100vw;
-  max-height: 100vh;
-  height: 100vh;
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .title {
-    font-size: 2vh;
-    position: absolute;
-    text-align: center;  
-  }
-}
-
 html {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 *,
@@ -59,12 +38,78 @@ html {
   box-sizing: inherit;
 }
 
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // mix-blend-mode: exclusion;
+  // padding: 2em;
+  padding: 1em 2em;
+  // background: linear-gradient(180deg, rgb(28 37 45) 55%, transparent);
+  background: linear-gradient(180deg, rgba(28, 37, 45, .85) 90%, transparent);
+
+  .logo {
+    width: 8em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu_button {
+    // font-family: "Montserrat", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    fill: #000000;
+    color: #000000;
+    background-color: #dbc8a2;
+    border-radius: 0px 0px 0px 0px;
+    padding: 6px 22px;
+  }
+}
+
+section.first_screen {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+
+    h1 {
+      font-weight: 300;
+      font-size: 60px;
+    }
+
+    p {
+      text-shadow: -1px 0px 5px rgb(0 0 0);
+      font-size: 24px;
+    }
+  }
+}
+
 :root {
   --carousel-width: 100vw;
   --carousel-height: calc(calc(calc(9 / 16) * var(--carousel-width)));
 }
 
-#slider {
+section.slider {
+  position: relative;
+
   .center {
     display: flex;
     justify-content: center;
@@ -74,8 +119,6 @@ html {
     width: var(--carousel-width);
     height: var(--carousel-height);
     contain: strict;
-    // margin-top: 1vw;
-    // border-radius: .5vmin;
   }
 
   .scroll {
@@ -106,10 +149,6 @@ html {
     object-fit: cover;
     width: var(--carousel-width);
     height: var(--carousel-height);
-    // width: 100%;
-    // height: 100%;
-    // rgba(0, 0, 0, 0.2);
-    // border-radius: 1rem;
   }
 
   .scroll-item > img:active {
@@ -147,50 +186,27 @@ html {
       scroll-snap-coordinate: 0 0;
     }
   }
-  #navigate {
+  .navigate {
     display: flex;
     justify-content: center;
     margin: auto;
     width: var(--carousel-width);
-    margin-block: -50px;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
   }
 
-  #navigate a {
+  .navigate li {
     text-decoration: none;
     color: #333;
     font-size: 0;
     background: #ddd;
-    z-index: 1;
+    // z-index: 1;
     line-height: 0;
     border-radius: 50%;
-    padding: .5rem;
-    margin: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
   }
-
-  #navigate a:hover {
-    box-shadow: 0 0 2rem -6px;
-  }
-}
-
-header {
-  position: fixed;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
 @media (prefers-color-scheme: light) {
@@ -203,5 +219,36 @@ h1 {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+section.barmen {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/img/barmen.jpeg);
+  // background-image: url(/public/img/barmen.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  .text {
+    text-align: center;
+    padding: 10px;
+
+    h2 {
+      font-weight: 300;
+      line-height: 1em;
+      font-size: 60px;
+    }
+
+    p {
+      text-shadow: -1px 0px 5px rgb(0 0 0);
+      font-size: 24px;
+    }
   }
 }
