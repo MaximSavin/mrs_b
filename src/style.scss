@@ -204,7 +204,7 @@ section.slider {
     // z-index: 1;
     line-height: 0;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 0.5rem;
   }
 }
@@ -256,8 +256,8 @@ section.barmen {
 .map {
   background-color: #EAE1CF;
   display: flex;
-  height: 100vh;
-  padding-top: 110px;
+  height: 55vh;
+  // padding-top: 110px;
   justify-content: space-between;
 
   .text {
@@ -270,6 +270,7 @@ section.barmen {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 
     & * {
       text-decoration: none;
@@ -298,8 +299,8 @@ section.barmen {
 @media (orientation: portrait) {
   .map {
     flex-direction: column;
-    height: 80vh;
-    padding-top: 20px;
+    height: 100vh;
+    padding-top: 100px;
 
     .text {
       max-width: none;
