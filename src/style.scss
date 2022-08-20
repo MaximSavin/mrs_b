@@ -145,6 +145,27 @@ section.slider {
   .scroll-item {
     width: var(--carousel-width);
     height: var(--carousel-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      position: absolute;
+      text-align: center;
+      padding: 10px;
+
+      h2 {
+        font-weight: 300;
+        line-height: 1em;
+        font-size: 60px;
+      }
+
+      p {
+        text-shadow: -1px 0px 5px rgb(0 0 0);
+        font-size: 24px;
+      }
+    }
   }
 
   .scroll-item > img {
@@ -208,30 +229,6 @@ section.slider {
     border-radius: 50%;
     padding: 0.3rem;
     margin: 0.5rem;
-  }
-
-  #slide-0 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .text {
-      position: absolute;
-      text-align: center;
-      padding: 10px;
-
-      h2 {
-        font-weight: 300;
-        line-height: 1em;
-        font-size: 60px;
-      }
-
-      p {
-        text-shadow: -1px 0px 5px rgb(0 0 0);
-        font-size: 24px;
-      }
-    }
   }
 }
 
