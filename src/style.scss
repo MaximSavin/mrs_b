@@ -49,7 +49,7 @@ header {
   // padding: 2em;
   padding: 1em 2em;
   // background: linear-gradient(180deg, rgb(28 37 45) 55%, transparent);
-  background: linear-gradient(180deg, rgba(28, 37, 45, .85) 90%, transparent);
+  background: linear-gradient(180deg, rgba(28, 37, 45, 0.85) 90%, transparent);
 
   .logo {
     width: 8em;
@@ -103,8 +103,10 @@ section.first_screen {
 }
 
 :root {
+  --carousel-height: 80vh;
   --carousel-width: 100vw;
-  --carousel-height: calc(calc(calc(9 / 16) * var(--carousel-width)));
+  // --carousel-width: calc(calc(calc(16 / 9) * var(--carousel-height)));
+  // --carousel-height: calc(calc(calc(9 / 16) * var(--carousel-width)));
 }
 
 section.slider {
@@ -207,6 +209,30 @@ section.slider {
     padding: 0.3rem;
     margin: 0.5rem;
   }
+
+  #slide-0 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      position: absolute;
+      text-align: center;
+      padding: 10px;
+
+      h2 {
+        font-weight: 300;
+        line-height: 1em;
+        font-size: 60px;
+      }
+
+      p {
+        text-shadow: -1px 0px 5px rgb(0 0 0);
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -254,7 +280,7 @@ section.barmen {
 }
 
 .map {
-  background-color: #EAE1CF;
+  background-color: #eae1cf;
   display: flex;
   height: 55vh;
   // padding-top: 110px;
@@ -281,7 +307,7 @@ section.barmen {
 
   .map-link {
     text-transform: uppercase;
-    color: #A7A3A3;
+    color: #a7a3a3;
   }
 
   .map-icon {
