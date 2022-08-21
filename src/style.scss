@@ -143,6 +143,10 @@ section.slider {
   }
 
   .scroll-item {
+    & * {
+      user-select: none;
+    }
+
     width: var(--carousel-width);
     height: var(--carousel-height);
     position: relative;
@@ -166,6 +170,10 @@ section.slider {
         font-size: 24px;
       }
     }
+  }
+
+  .scroll-item > img.fill {
+    object-fit: contain;
   }
 
   .scroll-item > img {
@@ -315,6 +323,7 @@ section.barmen {
 
   .map-img {
     width: 50vw;
+    height: 55vh;
     object-fit: cover;
     display: block;
   }

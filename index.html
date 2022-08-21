@@ -152,5 +152,27 @@
         ><img src="img/map.jpeg" class="map-img"
       /></a>
     </section>
+    <script>
+      // for (item of document.getElementsByClassName("scroll-item")) {
+      //   item.addEventListener("dblclick", (e) => {
+      //     console.dir(e.target);
+      //     e.target.classList.toggle('fill')
+      //   });
+      // }
+      // .classList.toggle('large')
+
+      const carousel = document.getElementsByClassName("scroll")[0];
+      let slidesCount = Math.round(carousel.scrollWidth / carousel.offsetWidth)
+      let slideScrollWidth = carousel.scrollWidth / slidesCount
+      let interval = setInterval(() => {
+        if (carousel.scrollLeft + slideScrollWidth > carousel.scrollWidth) {
+          carousel.scrollLeft = 0
+        } else {
+          carousel.scrollLeft += slideScrollWidth
+        }
+      }, 3000)
+
+      document.getElementsByClassName("scroll")[0].offsetWidth;
+    </script>
   </body>
 </html>
